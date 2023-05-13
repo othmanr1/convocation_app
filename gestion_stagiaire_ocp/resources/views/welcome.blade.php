@@ -80,6 +80,8 @@
 
         
     </div>
+
+
     <div class="w-1/2 h-full flex flex-col justify-center items-center bg-gray-700 relative right-img">
     <h2 class="absolute left-1/2 top-10 transform -translate-x-1/2 text-4xl font-extrabold dark:text-gray-700">Espace Stagiaire </h2>
     <img class="absolute left-20  transform -translate-x-1/2  ofppt-logo" src="{{ asset('background/ofppt.png')}}">

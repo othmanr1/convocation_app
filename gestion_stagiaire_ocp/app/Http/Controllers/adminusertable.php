@@ -61,11 +61,17 @@ public function generatePDF($id)
         'title' => 'stagiaire convocation',
         'user' => $user
     ];
-    
 
-    $pdf = PDF::loadView('stagiaire-pdf', $data);
+    $pdf = PDF::loadView('conv-pdf', $data);
 
-    return $pdf->download('stagiaire_convocation.pdf');
+    $filename = 'conv.pdf';
+
+    return response($pdf->output(), 200)
+        ->header('Content-Type', 'application/pdf')
+        ->header('Cache-Control', 'no-cache, no-store, must-revalidate')
+        ->header('Pragma', 'no-cache')
+        ->header('Expires', '0')
+        ->header('Content-Disposition', 'attachment; filename="' . $filename . '"');
 }
 
 public function showetat()
