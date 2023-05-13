@@ -22,12 +22,44 @@ class DatabaseSeeder extends Seeder
             'password'=>bcrypt('password')
         ]);
 
-        \App\Models\User::create([
-            'name'=>'User',
-            'Email' => 'user@user.com',
-            'password'=>bcrypt('password')
-        ]);
-
+       
+        \App\Models\User::create( [
+            'name'=>'rais',
+            'prenom'=>'othmane',
+            'email'=>'othman@gmail.com',
+         
+            'password'=>bcrypt('password'),
+            'departement'=>'mobile',
+            'periode'=>4,
+            'ecole'=>'fst',
+            'etat'=>0
+          
+            ] );
+            \App\Models\User::create( [
+                'name'=>'said',
+                'prenom'=>'yassin',
+                'email'=>'yassin@gmail.com',
+                
+                'password'=>bcrypt('password'),
+                'departement'=>'mobile',
+                'periode'=>4,
+                'ecole'=>'fst',
+                'etat'=>0
+                
+                ] );
+                \App\Models\User::create( [
+                    'name'=>'lotfi',
+                    'prenom'=>'ayaa',
+                    'email'=>'ayaa@gmail.com',
+                    
+                    'password'=>bcrypt('password'),
+                    'departement'=>'mobile',
+                    'periode'=>4,
+                    'ecole'=>'fst',
+                    'etat'=>0
+                    
+                    ] );    
+            
 
     }
 }
