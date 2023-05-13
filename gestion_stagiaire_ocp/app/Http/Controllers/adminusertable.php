@@ -64,7 +64,7 @@ public function generatePDF($id)
 
     $pdf = PDF::loadView('conv-pdf', $data);
 
-    $filename = 'conv.pdf';
+    $filename = time().'conv.pdf';
 
     return response($pdf->output(), 200)
         ->header('Content-Type', 'application/pdf')
