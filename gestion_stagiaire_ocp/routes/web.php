@@ -22,7 +22,9 @@ Route::get('/', function () {
 require __DIR__.'/auth.php';
 Route::get('/dashboard', [adminusertable::class, 'showetat'])->middleware(['auth'])->name('dashboard');
 
-Route::get('/admin/dashboard', [adminusertable::class, 'index'])->middleware(['auth:admin'])->name('admin.dashboard');
+Route::get('/admin/dashboard', [adminusertable::class , 'graph'])->middleware(['auth:admin'])->name('admin.dashboard');
+
+Route::get('/admin/demande', [adminusertable::class, 'index'])->middleware(['auth:admin'])->name('admin.demande');
 
 Route::put('/admin/dashboard/{id}', [adminusertable::class, 'updateEtat'])->name('update.etat');
 Route::put('/dashboard/another/{id}', [adminusertable::class, 'updateAnother'])->name('update.another');

@@ -3,7 +3,7 @@
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Laravel</title>
+      <title>Gestion_Stagiaire</title>
       <!-- Fonts -->
       <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
@@ -35,6 +35,10 @@
          height:600px;
          top:-24%;
          }
+         .btna{
+            width:;
+            width:;
+         }
       </style>
    </head>
    <body class="h-screen flex">
@@ -43,15 +47,15 @@
          <img class="absolute left-20 top-5 transform -translate-x-1/2  ocp-logo" src="{{ asset('background/ocp.svg')}}">
          @if (Route::has('admin.login'))
          @auth('admin')
-         <button type="button" class="absolute left-1/2 top-60 transform -translate-x-1/2  px-4 py-2 rounded-full py-3  inline-flex justify-center items-center gap-2 rounded-md bg-blue-500 border border-transparent font-semibold text-white hover:text-white hover:bg-blue-800 focus:outline-none focus:ring-2 ring-offset-white focus:ring-gray-800 focus:ring-offset-2 transition-all text-sm dark:bg-gray-700 dark:hover:bg-gray-900 dark:text-white">
+         <button type="button" class="btna absolute left-1/2 top-60 transform -translate-x-1/2  px-4 py-2 rounded-full py-3  inline-flex justify-center items-center gap-2 rounded-md bg-blue-500 border border-transparent font-semibold text-white hover:text-white hover:bg-blue-800 focus:outline-none focus:ring-2 ring-offset-white focus:ring-gray-800 focus:ring-offset-2 transition-all text-sm dark:bg-gray-700 dark:hover:bg-gray-900 dark:text-white">
          <a href="{{ url('/admin/dashboard') }}" >Admin Dashboard</a>
         </button>
          @else
-         <button type="button" class="absolute left-1/2 top-60 transform -translate-x-1/2  px-4 py-2 rounded-full py-3  inline-flex justify-center items-center gap-2 rounded-md bg-blue-500 border border-transparent font-semibold text-white hover:text-white hover:bg-blue-800 focus:outline-none focus:ring-2 ring-offset-white focus:ring-gray-800 focus:ring-offset-2 transition-all text-sm dark:bg-gray-700 dark:hover:bg-gray-900 dark:text-white">
+         <button type="button" class=" btna absolute left-1/2 top-60 transform -translate-x-1/2  px-4 py-2 rounded-full py-3  inline-flex justify-center items-center gap-2 rounded-md bg-blue-500 border border-transparent font-semibold text-white hover:text-white hover:bg-blue-800 focus:outline-none focus:ring-2 ring-offset-white focus:ring-gray-800 focus:ring-offset-2 transition-all text-sm dark:bg-gray-700 dark:hover:bg-gray-900 dark:text-white">
          <a href="{{ route('admin.login') }}" >Admin Log in</a>
          </button>
          @if (Route::has('register'))
-         <button type="button" class="absolute left-100 bottom-60 transform translate-y-full px-4 py-2 rounded-full py-3 inline-flex justify-center items-center gap-2 rounded-md bg-blue-500 border border-transparent font-semibold text-white hover:text-white hover:bg-blue-800 focus:outline-none focus:ring-2 ring-offset-white focus:ring-gray-800 focus:ring-offset-2 transition-all text-sm dark:bg-gray-700 dark:hover:bg-gray-900 dark:text-white">
+         <button type="button" class=" btna absolute left-100 bottom-60 transform translate-y-full px-4 py-2 rounded-full py-3 inline-flex justify-center items-center gap-2 rounded-md bg-blue-500 border border-transparent font-semibold text-white hover:text-white hover:bg-blue-800 focus:outline-none focus:ring-2 ring-offset-white focus:ring-gray-800 focus:ring-offset-2 transition-all text-sm dark:bg-gray-700 dark:hover:bg-gray-900 dark:text-white">
          <a href="{{ route('admin.register') }}">Admin Register</a>
          </button>
          @endif
@@ -66,11 +70,11 @@
          @auth
          <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
          @else
-         <button type="button" class="absolute left-1/2 top-60 transform -translate-x-1/2  px-4 py-2 rounded-full py-3  inline-flex justify-center items-center gap-2 rounded-md  bg-blue-500 border border-transparent font-semibold text-white hover:text-white hover:bg-blue-800 focus:outline-none focus:ring-2 ring-offset-white focus:ring-gray-800 focus:ring-offset-2 transition-all text-sm dark:bg-gray-700 dark:hover:bg-gray-900 dark:text-white">
+         <button type="button" class="btna absolute left-1/2 top-60 transform -translate-x-1/2  px-4 py-2 rounded-full py-3  inline-flex justify-center items-center gap-2 rounded-md  bg-blue-500 border border-transparent font-semibold text-white hover:text-white hover:bg-blue-800 focus:outline-none focus:ring-2 ring-offset-white focus:ring-gray-800 focus:ring-offset-2 transition-all text-sm dark:bg-gray-700 dark:hover:bg-gray-900 dark:text-white">
          <a href="{{ route('login') }}" >Log in</a>
          </button>
          @if (Route::has('register'))
-         <button type="button" class=" absolute left-100 bottom-60 transform translate-y-full px-4 py-2 rounded-full py-3 inline-flex justify-center items-center gap-2 rounded-md   bg-blue-500 border border-transparent font-semibold text-white hover:text-white hover:bg-blue-800 focus:outline-none focus:ring-2 ring-offset-white focus:ring-gray-800 focus:ring-offset-2 transition-all text-sm dark:bg-gray-700 dark:hover:bg-gray-900 dark:text-white">
+         <button type="button" class="btna absolute left-100 bottom-60 transform translate-y-full px-4 py-2 rounded-full py-3 inline-flex justify-center items-center gap-2 rounded-md   bg-blue-500 border border-transparent font-semibold text-white hover:text-white hover:bg-blue-800 focus:outline-none focus:ring-2 ring-offset-white focus:ring-gray-800 focus:ring-offset-2 transition-all text-sm dark:bg-gray-700 dark:hover:bg-gray-900 dark:text-white">
          <a href="{{ route('register') }}" >Register</a>
          </button>
          @endif

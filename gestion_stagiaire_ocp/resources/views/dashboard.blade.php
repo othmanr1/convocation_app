@@ -9,13 +9,13 @@
          <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
             <div class="p-6 bg-white border-b border-gray-200">
                <h2 class="text-6xl text-gray-900 dark:text-slate-700"> 
-                  votre demande est  :          @php
+                          @php
                   $etat = Auth::user()->etat;
                   @endphp
                   @if($etat === 0)
-                  <span>en cours !!</span>
+                  <span>votre demande est  :  en cours !!</span>
                   @elseif($etat === 1)
-                  <span>accepté vous pouver tirer votre convocation</span>
+                  <span>Votre demande a été acceptée. Vous pouvez maintenant imprimer votre convocation.</span>
                   @else
                   <span>désolé(e) Nous avons atteint le nombre maximal de stagiaires.</span>
                   @endif

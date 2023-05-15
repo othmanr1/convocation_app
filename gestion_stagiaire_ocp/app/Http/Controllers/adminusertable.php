@@ -4,14 +4,33 @@ namespace App\Http\Controllers;
 use PDF;
 use Illuminate\Http\Request;
 use App\Models\User; 
+use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 class adminusertable extends Controller
 {
     public function index()
     {
         $user = DB::table('users')->where('etat', 0)->paginate(5);
-        return view('admin.dashboard', compact('user'));
+        return view('admin.demande', compact('user'));
     }
+
+// Controller function
+public function graph()
+{
+    $users = User::selectRaw("count(*) as count, MONTH(created_at) as month")
+    ->where('etat', 1)
+    ->groupBy('month')
+    ->get();
+
+// Prepare the data for the chart
+$labels = $users->map(function ($user) {
+return Carbon::createFromDate(null, $user->month, null)->format('F');
+});
+$data = $users->pluck('count');
+        // Pass the data to the view
+        return view('admin.dashboard', compact('labels', 'data'));
+}
+      
     public function valider()
     {
         $user = DB::table('users')->where('etat', 1)->paginate(5);

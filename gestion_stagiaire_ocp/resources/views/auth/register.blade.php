@@ -1,3 +1,4 @@
+
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
@@ -61,12 +62,19 @@
             </div>
             <!-- Periode -->
             <div class="mt-4">
-                <x-label for="periode" :value="__('Periode en Mois')" />
+    <x-label for="periode" :value="__('Periode en Mois')" class="block mb-2 text-gray-700 font-bold" />
 
-                <x-input id="password_confirmation" class="block mt-1 w-full"
-                                type="number"
-                                name="periode" required />
-            </div>
+    <select id="amount" name="periode" class="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-blue-500 focus:ring-blue-500">
+    
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+    </select>
+</div>
+           
             <!-- Ecole -->
             <div class="mt-4">
                 <x-label for="ecole" :value="__('Ecole')" />
